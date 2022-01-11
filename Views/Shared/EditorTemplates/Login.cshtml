@@ -1,0 +1,13 @@
+﻿@model User
+
+<div class="form-group">
+    @Html.Label("Email", "Email", new { @class = "control-label" })
+    @Html.TextBox("Email", "", new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.Label("Password", "Password", new { @class = "control-label" })
+    @Html.Password("Password", "", new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <button type="submit" class="btn btn-dark btn-block">Prijavi se</button>
+</div>

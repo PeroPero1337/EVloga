@@ -1,0 +1,14 @@
+﻿@model OsebniPodatki
+@{ ViewData["Title"] = "Izpolnjevanje vloge"; }
+<div class="text-center text-light">
+    <h1>Osebni podatki</h1>
+</div>
+<hr />
+<div class="form-container">
+    @using (Html.BeginForm("Index", "Vloga", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.EditorForModel("Osebni")
+
+    }
+</div>

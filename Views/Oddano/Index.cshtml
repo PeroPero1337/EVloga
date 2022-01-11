@@ -1,0 +1,32 @@
+﻿@model List<OsebniPodatki>
+@{ViewData["Title"] = "Oddano"; }
+
+<div class="table-container">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID vloge</th>
+                <th scope="col">Vloga</th>
+                <th scope="col">Ime</th>
+                <th scope="col">Priimek</th>
+                <th scope="col">Datum Oddaje</th>
+                <th scope="col">Email</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (OsebniPodatki item in Model)
+            {
+                <tr>
+                    <td>@item.OsebniId</td>
+                    <td>Vloga za oprosittev socialno varstvenih stroškov</td>
+                    <td>@item.Ime</td>
+                    <td>@item.Priimek</td>
+                    <td>@item.DatumOddaje.ToString()</td>
+                    <td>@item.Vlagatelj</td>
+                    <td>@Html.ActionLink("Preglej", "Details", "Oddano", item)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

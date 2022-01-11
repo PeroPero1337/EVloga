@@ -1,0 +1,30 @@
+﻿@model List<Dokument>
+
+<div class="table-container">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Ime dokumenta</th>
+                <th scope="col">tip dokumenta</th>
+                <th scope="col">Dokument</th>
+                <th scope="col">Ustvarjen</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Dokument item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>Vloga za oprosittev socialno varstvenih stroškov</td>
+                    <td>@item.DocName</td>
+                    <td>@item.FileType</td>
+                    <td>@item.File</td>
+                    <td>@item.CreatedOn.ToString()</td>
+                    <td>@Html.ActionLink("Prenesi", "Download", "Oddano", item)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

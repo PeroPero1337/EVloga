@@ -1,0 +1,45 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<RegUser> _logInManager
+
+@{ViewData["Title"] = "Izbira vloge"; }
+
+@if (User.IsInRole("User"))
+{
+    <div>
+        <div class="text-center text-light">
+            <h1>Izbira vloge</h1>
+        </div>
+        <hr />
+        <div class="collection">
+            <h5 class="text-light">E-vloga za upravičenca</h5>
+            <a class="btn btn-light" asp-area="" asp-controller="Vloga" asp-action="Index">Začni vlogo</a>
+        </div>
+    </div>
+}
+@if (User.IsInRole("Social"))
+{
+    <div>
+        <div class="text-center text-light">
+            <h1>Pregled Vlog</h1>
+        </div>
+        <hr />
+        <div class="collection">
+            <h5 class="text-light">E-vloge</h5>
+            <a class="btn btn-light" asp-area="" asp-controller="Oddano" asp-action="Index">Preglej</a>
+        </div>
+    </div>
+
+}
+@if (User.IsInRole("Furs"))
+{
+    <div>
+        <div class="text-center text-light">
+            <h1>Pregled Vlog</h1>
+        </div>
+        <hr />
+        <div class="collection">
+            <h5 class="text-light">E-vloge</h5>
+            <a class="btn btn-light" asp-area="" asp-controller="Home" asp-action="Index"></a>
+        </div>
+    </div>
+
+}

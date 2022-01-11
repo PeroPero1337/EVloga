@@ -1,0 +1,28 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<RegUser> _logInManager
+@model List<OsebniPodatki>
+@{ViewData["Title"] = "Profil"; }
+
+<div class="form-container">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Oddane vloge</th>
+                <th scope="col">Status</th>
+                <th scope="col">Datum</th>
+                <th scope="col">Vpogled</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (OsebniPodatki item in Model)
+            {
+            <tr>
+                <td>Vloga za oprosittev socialno varstvenih stroškov</td>
+                <td>V obdelavi</td>
+                <td>@item.DatumOddaje.ToString()</td>
+                <td>@item.Status</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

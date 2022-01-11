@@ -1,0 +1,22 @@
+﻿@model OsebniPodatki
+<h2>Vlagatelj</h2>
+<div class="text-capitalize text-light">
+    <p class="font-weight-bold">ID: <span class="font-weight-light">@Html.DisplayFor(m => m.OsebniId)</span></p>
+</div>
+<div class="text-capitalize text-light">
+    <p class="font-weight-bold">Ime: <span class="font-weight-light">@Html.DisplayFor(m => m.Ime)</span></p>
+</div>
+<div class="text-capitalize text-light">
+    <p class="font-weight-bold">Priimek: <span class="font-weight-light">@Html.DisplayFor(m => m.Priimek)</span></p>
+</div>
+<div>
+    <p class="font-weight-bold text-light">Datum rojstva: <span class="font-weight-light">@Html.DisplayFor(m => m.RojDan)</span> </p>
+</div>
+<div>
+    @Html.ActionLink("Dokumenti", "GetFiles", "Oddano", Model, new { @class = "btn btn-light" })
+</div>
+<div>
+    @Html.ActionLink("Odobreno", "Approved", "Oddano", Model, new { @class = "btn btn-success" })
+    @Html.ActionLink("Zavrnjeno", "Denied", "Oddano", Model, new { @class = "btn btn-danger" })
+
+</div>

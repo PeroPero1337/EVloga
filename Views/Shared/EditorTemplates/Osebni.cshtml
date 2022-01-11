@@ -1,0 +1,29 @@
+﻿@model OsebniPodatki
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Ime, new { @class = "control-label" })
+    @Html.EditorFor(m => m.Ime, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Priimek, new { @class = "control-label" })
+    @Html.EditorFor(m => m.Priimek, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.RojDan, new { @class = "control-label" })
+    @Html.EditorFor(m => m.RojDan, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.KrajRojstva, new { @class = "control-label" })
+    @Html.EditorFor(m => m.KrajRojstva, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.EMSO, new { @class = "control-label" })
+    @Html.EditorFor(m => m.EMSO, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Davcna, new { @class = "control-label" })
+    @Html.EditorFor(m => m.Davcna, new { @class = "form-control" })
+</div> 
+<div class="form-group">
+    <button type="submit" class="btn btn-dark btn-block">naprej</button>
+</div>
